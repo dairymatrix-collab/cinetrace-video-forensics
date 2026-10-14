@@ -1,0 +1,16 @@
+{
+  "name": "CineTrace Video Forensics",
+  "slug": "cinetrace-video-forensics",
+  "repository_name": "cinetrace-video-forensics",
+  "author": "Arif Mughal",
+  "maintainer": "Arif Mughal",
+  "tagline": "Evidence-first forensic reconstruction of how social videos were made.",
+  "description": "Analyze authorized YouTube, TikTok, Instagram, Facebook, X, and local videos to extract provenance metadata, C2PA clues, encoder fingerprints, audio measurements, shot timelines, edit structure, captions, compositing, likely toolchains, platform metadata, and reproducible forensic reports.",
+  "search_intent": ["video forensics", "video origin analysis", "how was this video made", "identify video editing software", "identify AI video tool", "social media video metadata", "C2PA video provenance", "YouTube video production analysis", "audio video forensic analysis", "shot by shot video analysis"],
+  "topics": ["video-forensics", "media-forensics", "video-analysis", "video-provenance", "c2pa", "content-credentials", "ai-video", "video-editing", "social-media-analysis", "ffmpeg", "ffprobe", "audio-forensics", "computer-vision", "ai-agent-skill", "multimodal-ai"],
+  "keywords": ["CineTrace", "video origin forensics", "production artifact analysis", "encoder fingerprint", "MP4 metadata", "XMP metadata", "JUMBF", "Content Credentials", "scene cut detection", "edit decision reconstruction", "caption analysis", "motion graphics analysis", "voice and audio analysis", "clean-room recreation", "evidence ledger"],
+  "audience": ["AI agents", "video editors", "content creators", "digital forensics researchers", "media literacy teams", "OSINT analysts", "film and post-production students"],
+  "canonical_upstream": "https://github.com/morluto/rea",
+  "indexing_phrases": ["CineTrace Video Forensics skill", "forensic analysis of YouTube videos", "find how a social media video was edited", "identify likely video production tools from evidence", "extract video provenance and metadata"],
+  "claims_policy": "Never claim exact software, AI model, private prompt, or creation time without direct evidence."
+}

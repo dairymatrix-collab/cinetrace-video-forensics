@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Video Origin Evidence Item",
+  "type": "object",
+  "required": ["id", "claim", "status", "confidence", "source"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^E-[0-9]{3,}$"},
+    "claim": {"type": "string"},
+    "status": {"enum": ["observed", "inferred", "unknown"]},
+    "confidence": {"enum": ["confirmed", "strongly_supported", "probable", "possible", "not_determinable"]},
+    "source": {"type": "string"},
+    "timestamp_start": {"type": ["number", "null"], "minimum": 0},
+    "timestamp_end": {"type": ["number", "null"], "minimum": 0},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "alternatives": {"type": "array", "items": {"type": "string"}}
+  }
+}

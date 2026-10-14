@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "CineTrace Video Forensics"
+type: software
+abstract: "Evidence-first forensic reconstruction of how authorized social videos were produced."
+license: MIT
+authors:
+  - family-names: Mughal
+    given-names: Arif
+keywords:
+  - video-forensics
+  - media-forensics
+  - video-provenance
+  - c2pa
+  - ai-video
+  - video-editing
+  - audio-forensics
+  - ai-agent-skill
