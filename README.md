@@ -2,7 +2,7 @@
 
 > Evidence-first forensic reconstruction of how YouTube and social-media videos were made.
 
-**Maintainer:** Arif Mughal
+**Maintainer:** Arifmughal
 
 CineTrace analyzes authorized YouTube, TikTok, Instagram, Facebook, X, and local videos as production artifacts. It extracts container metadata, encoder clues, C2PA/Content Credentials signals, audio measurements, candidate scene cuts, shot structure, captions, motion graphics, compositing, likely capture/edit/generation/audio tools, public platform metadata, and a detailed timestamped evidence report.
 
@@ -25,11 +25,17 @@ It does not turn visual style into fake certainty. Exact editing software, AI mo
 
 ## Quick start
 
+Requirements for the local media probes: Python 3 plus `ffmpeg` and `ffprobe` on `PATH`. Install FFmpeg from the [official FFmpeg download page](https://ffmpeg.org/download.html) or a trusted OS distributor, then confirm both commands are available with `ffmpeg -version` and `ffprobe -version`.
+
 ```bash
 python3 scripts/run_cinetrace.py /absolute/path/video.mp4 --out ./cinetrace-evidence
 ```
 
 Load `SKILL.md` into an AI agent. Use `SKILL-ROMAN-URDU.md` for the complete Roman Urdu translation and `templates/video-origin-report.md` for the output report.
+
+## Local tests
+
+Run the standard-library unit suite and compile checks with `python3 -m unittest discover -s tests -v` and `python3 -m compileall -q scripts tests`. The unit tests mock FFmpeg subprocesses and do not need media files or FFmpeg execution. A real end-to-end media probe is a separate integration check: use only an authorized synthetic or user-owned video.
 
 ## Search keywords
 
