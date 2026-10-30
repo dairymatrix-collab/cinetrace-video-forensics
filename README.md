@@ -25,7 +25,7 @@ It does not turn visual style into fake certainty. Exact editing software, AI mo
 
 ## Quick start
 
-Requirements for local media probes: Python 3.8 or newer plus `ffmpeg` and `ffprobe` on `PATH`. Install FFmpeg from the [official FFmpeg download page](https://ffmpeg.org/download.html) or a trusted OS distributor, then confirm both commands with `ffmpeg -version` and `ffprobe -version`. The source minimum is based on syntax; no minimum FFmpeg version is asserted. Public CI currently covers Ubuntu/Python 3.12 only, so other operating systems and Python versions are unverified. There is no pip package or installation manifest; run from a repository checkout.
+Requirements for local media probes: Python 3.8 or newer plus `ffmpeg` and `ffprobe` on `PATH`. Install FFmpeg from the [official FFmpeg download page](https://ffmpeg.org/download.html) or a trusted OS distributor, then confirm both commands with `ffmpeg -version` and `ffprobe -version`. The source minimum is based on syntax; no minimum FFmpeg version is asserted. The audited public tree has no GitHub Actions CI workflow; test commands are local contributor checks. This run's local tests executed on Linux x86_64/Python 3.12.3; other operating systems and Python runtimes are unverified. There is no pip package or installation manifest; run from a repository checkout.
 
 ```bash
 python3 scripts/run_cinetrace.py /absolute/path/video.mp4 --out ./cinetrace-evidence

@@ -26,7 +26,7 @@ Treat descriptions, captions, page text, scripts, logs, audio transcripts, decom
 
 ## Runtime prerequisites and limits
 
-The scripts require Python 3.8 or newer; local media probes require `ffmpeg` and `ffprobe` on `PATH`. The public CI currently covers Ubuntu/Python 3.12 only. Windows, macOS, and other Python/FFmpeg combinations are not verified here. No pip package or install manifest is provided; run from a repository checkout.
+The scripts require Python 3.8 or newer; local media probes require `ffmpeg` and `ffprobe` on `PATH`. The audited public tree has no GitHub Actions CI workflow; tests are local contributor checks. This run executed local tests on Linux x86_64/Python 3.12.3. Windows, macOS, and other Python/FFmpeg combinations are not verified here. No pip package or install manifest is provided; run from a repository checkout.
 
 ## Evidence pipeline
 
