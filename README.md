@@ -4,7 +4,7 @@
 
 **Maintainer:** Arifmughal
 
-CineTrace analyzes authorized YouTube, TikTok, Instagram, Facebook, X, and local videos as production artifacts. It extracts container metadata, encoder clues, C2PA/Content Credentials signals, audio measurements, candidate scene cuts, shot structure, captions, motion graphics, compositing, likely capture/edit/generation/audio tools, public platform metadata, and a detailed timestamped evidence report.
+CineTrace helps analyze authorized YouTube, TikTok, Instagram, Facebook, X, and local videos as production artifacts. Its CLI creates deterministic probe artifacts, logs, and a run manifest; it does **not** compose the completed timestamped forensic report. That report requires reviewing the evidence with the Skill workflow and filling the report template.
 
 ## Why CineTrace is different
 
@@ -20,18 +20,18 @@ It does not turn visual style into fake certainty. Exact editing software, AI mo
 - timestamped shot, caption, overlay, transition, tracking, masking, and compositing analysis
 - stage-by-stage tool-family ranking with confidence and alternatives
 - public platform metadata separated from file provenance
-- complete Markdown forensic report and evidence schema
+- Markdown report template and evidence schema for the agent/human review workflow
 - clean-room recreation workflow using user-owned assets
 
 ## Quick start
 
-Requirements for the local media probes: Python 3 plus `ffmpeg` and `ffprobe` on `PATH`. Install FFmpeg from the [official FFmpeg download page](https://ffmpeg.org/download.html) or a trusted OS distributor, then confirm both commands are available with `ffmpeg -version` and `ffprobe -version`.
+Requirements for local media probes: Python 3.8 or newer plus `ffmpeg` and `ffprobe` on `PATH`. Install FFmpeg from the [official FFmpeg download page](https://ffmpeg.org/download.html) or a trusted OS distributor, then confirm both commands with `ffmpeg -version` and `ffprobe -version`. The source minimum is based on syntax; no minimum FFmpeg version is asserted. Public CI currently covers Ubuntu/Python 3.12 only, so other operating systems and Python versions are unverified. There is no pip package or installation manifest; run from a repository checkout.
 
 ```bash
 python3 scripts/run_cinetrace.py /absolute/path/video.mp4 --out ./cinetrace-evidence
 ```
 
-Load `SKILL.md` into an AI agent. Use `SKILL-ROMAN-URDU.md` for the complete Roman Urdu translation and `templates/video-origin-report.md` for the output report.
+Load `SKILL.md` into an AI agent. Use `SKILL-ROMAN-URDU.md` for the complete Roman Urdu translation and `templates/video-origin-report.md` for the final report. Run output is probe evidence, not a finished forensic report.
 
 ## Local tests
 
